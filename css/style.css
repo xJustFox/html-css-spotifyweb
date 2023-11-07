@@ -48,6 +48,7 @@ img{
 nav{
     width: 100%;
     height: 100%;
+    overflow-y: clip;
 }
 
 #upgrade{
@@ -88,9 +89,6 @@ nav .row{
 }
 
 nav .col{
-    background-color: aqua;
-    height: 40px;
-    
     width: 40px;
 }
 
@@ -140,6 +138,89 @@ footer .col{
 }
 
                 /* ITEMS */
+
+    /* Items Vertical Navigation Bar */
+
+/* Navigation Bar */
+nav .row .col img{
+    padding: 7px;
+}
+
+nav .row .col:last-child img:last-child{
+    border-radius: 50%;
+    background-color: gray;
+}
+
+/* Hidden Navigation Bar */
+.hidden-nav,
+.bott-hidden-nav{
+    display: none;
+}
+#logo{
+    width: 80%;
+    padding-bottom: 30px;
+}
+
+.hidden-nav ul li div{
+    display: inline;
+    vertical-align: middle;
+}
+
+.hidden-nav ul li{
+    color: gray;
+}
+
+.hidden-nav ul:last-child li{
+    line-height: 40px;
+    padding-left: 7px; 
+}
+
+.hidden-nav ul:last-child li:first-child{
+    color: white; 
+    list-style: none;
+}
+
+.hidden-nav img{
+    width: 40px;
+    vertical-align: middle;
+}
+
+/* Bottom Hidden Navigation Bar */
+
+.bott-hidden-nav div:first-child{
+    color: gray;
+    border-bottom: 1px solid gray;
+    margin-bottom: 15px;
+    line-height: 40px;
+}
+
+.bott-hidden-nav div:first-child img:first-child{
+    filter: invert(50%);
+    vertical-align: middle;     
+    width: 20px;
+
+    padding: unset;
+}
+
+.bott-hidden-nav div:first-child div{
+    vertical-align: middle;
+    display: inline;
+}
+
+.bott-hidden-nav div:last-child img{
+    width: 35px;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: gray;
+    padding: unset;
+}
+
+.bott-hidden-nav div:last-child div{
+    display: inline;
+    color: white;
+    vertical-align: middle;
+    padding-left: 10px;
+}
 
     /* Items Container Main Content */
 
@@ -203,48 +284,63 @@ main .row:last-child .col img{
     margin: 0 20px;
 }
 
+.reset-list{
+    list-style: none;
+}
 
+.padding-t-20px{
+    padding-top: 20px;
+}
+
+.padding-10{
+    padding: 10px;
+}
 
 
 
 
 @media  screen and (min-width: 576px) {
+    /* Macro layout */
     .cont-main{
-        width: calc(100% - 200px);
+        width: calc(100% - 210px);
     }
 
     #upgrade{   
-        width: calc(100% - 200px);
+        width: calc(100% - 210px);
     }
 
+    /* Flex layout */
     .cont-nav{
-        width: 200px;
+        width: 210px;
+    }
+
+    nav .col{
+        width: 210px;
+    }
+
+    /* Items Navigation Bar */
+    .visibile-nav{
+        display: none;
+    }
+
+    .hidden-nav,
+    .bott-hidden-nav{
+        display: contents;
     }
 }
 
 @media  screen and (min-width: 768px) {
-    .cont-main{
-        width: calc(100% - 200px);
-    }
-
-    #upgrade{   
-        width: calc(100% - 200px);
-    }
-
+    /* Flex layout */
     main .col{
         width: calc(100% / 4 - 20px);
     }
 }
 
 @media  screen and (min-width: 991px) {
-    .cont-main{
-        width: calc(100% - 200px);
-    }
-    #upgrade{   
-        width: calc(100% - 200px);
-    }
-
+    /* Flex layout */
     main .col{
         width: calc(100% / 6 - 20px);
     }
 }
+
+

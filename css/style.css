@@ -8,9 +8,12 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+img{
+    width: 100%;
+}
+
 /* Macro Layout */
 .cont-top{
-    background-color: green;
     height: calc(100vh - 80px);
 }
 
@@ -42,6 +45,11 @@ body{
     height: 100%;
 }
 
+nav{
+    width: 100%;
+    height: 100%;
+}
+
 #upgrade{
     background-color: #080b12a0;
     width: 100%;
@@ -53,28 +61,110 @@ body{
 
 main{
     width: 100%;
-    height: 100%;
     margin-top: 70px;
 
     overflow-y: scroll;
 }
 
+footer{
+    width: 100%;
+    height: 100%;
+}
 
-/* layout Flex */
+                /* FLEX LAYOUT */
 
-.row{
+/* Layout Flex Nav */
+nav .container{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+nav .row{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+nav .col{
+    background-color: aqua;
+    height: 40px;
+    
+    width: 40px;
+}
+
+/* layout Flex Main */
+
+main .container{
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+main .row{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
 
-.col{
+main .col{
     background: red;
     height: 200px;
-    width: 200px;
+    width: calc(100% / 2 - 20px);
     margin: 10px;
+}
+
+main .col:first-child{
+    width: 100%;
+    height: auto;
+}
+
+/* layout Flex Player (Footer) */
+footer .container{
+    width: 100%;
+    height: 100%;
+}
+
+footer .row{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .col{
+    background-color: aqua;
+    height: 50px;
+
+    width: 150px;
+}
+
+/* Reusable class */
+
+.margin-l-r-20{
+    margin: 0 20px;
 }
 
 
 
 
+
+
+@media  screen and (min-width: 576px) {
+    .cont-nav{
+        width: 200px;
+    }
+}
+
+@media  screen and (min-width: 768px) {
+    main .col{
+        width: calc(100% / 4 - 20px);
+    }
+}
+
+@media  screen and (min-width: 991px) {
+    main .col{
+        width: calc(100% / 6 - 20px);
+    }
+}

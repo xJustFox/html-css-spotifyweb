@@ -151,20 +151,27 @@ nav .row .col:last-child img:last-child{
     background-color: gray;
 }
 
+/* HOVER Navigation Bar*/
+nav .row .col img:hover{
+    cursor: pointer;
+}
+
 /* Hidden Navigation Bar */
 .hidden-nav,
 .bott-hidden-nav{
     display: none;
 }
+
 #logo{
     width: 80%;
     padding-bottom: 30px;
 }
 
 .hidden-nav .ul-scroll{
-    max-height: 30vh;
+    max-height: 35vh;
     overflow-y: scroll;
 }
+
 .hidden-nav ul li div{
     display: inline;
     vertical-align: middle;
@@ -176,7 +183,6 @@ nav .row .col:last-child img:last-child{
 
 .hidden-nav ul:last-child li{
     line-height: 40px;
-    padding-left: 7px; 
 }
 
 .hidden-nav img{
@@ -184,8 +190,20 @@ nav .row .col:last-child img:last-child{
     vertical-align: middle;
 }
 
-/* Bottom Hidden Navigation Bar */
+.hidden-nav ul li i{
+    background-color: gray;
+    color: black;
+    padding: 10px;
+}
 
+/* HOVER Bottom Hidden Navigation Bar */
+.hidden-nav ul li:hover,
+.bott-hidden-nav div:hover{
+    cursor: pointer;
+    color: white;
+}
+
+/* Bottom Hidden Navigation Bar */
 .bott-hidden-nav div:first-child{
     color: gray;
     border-bottom: 1px solid gray;
@@ -193,7 +211,7 @@ nav .row .col:last-child img:last-child{
     line-height: 40px;
 }
 
-.bott-hidden-nav div:first-child img:first-child{
+.bott-hidden-nav div:first-child #img-download{
     filter: invert(50%);
     vertical-align: middle;     
     width: 20px;
@@ -235,7 +253,7 @@ nav .row .col:last-child img:last-child{
     font-size: 13px;
 }
 
-/* Hover Button */
+/* HOVER Button */
 #upgrade div:first-child:hover{
     font-size: 15px;
     cursor: pointer;
@@ -289,7 +307,7 @@ main .row:last-child .col img{
     border-radius: 50%;
 }
 
-/* Hover Cards */
+/* HOVER Cards */
 main .row .col .bg-overlay{
     display: none;
     background-color: rgba(16, 16, 16, 0.4);
@@ -322,6 +340,10 @@ main .row .col .cont-overlay:hover .play-overlay{
     margin: 0 20px;
 }
 
+.margin-t-20px{
+    margin-top: 20px;
+}
+
 .reset-list{
     list-style: none;
 }
@@ -332,6 +354,10 @@ main .row .col .cont-overlay:hover .play-overlay{
 
 .padding-10{
     padding: 10px;
+}
+
+.padding-l-r-7{
+    padding: 0 7px;
 }
 
 .relative{

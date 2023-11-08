@@ -161,6 +161,10 @@ nav .row .col:last-child img:last-child{
     padding-bottom: 30px;
 }
 
+.hidden-nav .ul-scroll{
+    max-height: 30vh;
+    overflow-y: scroll;
+}
 .hidden-nav ul li div{
     display: inline;
     vertical-align: middle;
@@ -173,11 +177,6 @@ nav .row .col:last-child img:last-child{
 .hidden-nav ul:last-child li{
     line-height: 40px;
     padding-left: 7px; 
-}
-
-.hidden-nav ul:last-child li:first-child{
-    color: white; 
-    list-style: none;
 }
 
 .hidden-nav img{
@@ -296,6 +295,11 @@ main .row:last-child .col img{
     padding: 10px;
 }
 
+/* Texts */
+.text-white{
+    color: white;
+}
+
 
 
 
@@ -315,7 +319,7 @@ main .row:last-child .col img{
     }
 
     nav .col{
-        width: 210px;
+        width: 200px;
     }
 
     /* Items Navigation Bar */
@@ -325,7 +329,7 @@ main .row:last-child .col img{
 
     .hidden-nav,
     .bott-hidden-nav{
-        display: contents;
+        display: block;
     }
 }
 

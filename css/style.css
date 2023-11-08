@@ -232,7 +232,13 @@ nav .row .col:last-child img:last-child{
     border: 1px solid white;
     border-radius: 25px;
     color: white;
-    font-size: small;
+    font-size: 13px;
+}
+
+/* Hover Button */
+#upgrade div:first-child:hover{
+    font-size: 15px;
+    cursor: pointer;
 }
 
 /* List Menu */
@@ -246,6 +252,12 @@ main .row ul li{
     padding: 0 5px;
     font-size: 10px;
     color: gray;
+}
+
+/* Hover List */
+main .row ul li:hover{
+    color: white;
+    cursor: pointer;
 }
 
 
@@ -277,6 +289,33 @@ main .row:last-child .col img{
     border-radius: 50%;
 }
 
+/* Hover Cards */
+main .row .col .bg-overlay{
+    display: none;
+    background-color: rgba(16, 16, 16, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+main .row .col .play-overlay{
+    display: none;
+    color: white;
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main .row .col .cont-overlay:hover .bg-overlay,
+main .row .col .cont-overlay:hover .play-overlay{
+    display: block;
+    cursor: pointer;
+}
+
 /* Reusable class */
 
 .margin-l-r-20{
@@ -293,6 +332,10 @@ main .row:last-child .col img{
 
 .padding-10{
     padding: 10px;
+}
+
+.relative{
+    position: relative;
 }
 
 /* Texts */

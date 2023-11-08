@@ -117,9 +117,8 @@ main .col:first-child{
 
 /* layout Flex Player (Footer) */
 footer .container{
-    width: calc(100% - 20px);
+    width:100%;
     height: 100%;
-    margin: 0 10px;
 }
 
 footer .row{
@@ -131,15 +130,13 @@ footer .row{
 }
 
 footer .col{
-    background-color: aqua;
-    height: 50px;
-
-    width: 150px;
+    height: 100%;
+    padding: 10px 5px;
 }
 
                 /* ITEMS */
 
-    /* Items Vertical Navigation Bar */
+        /* Items Vertical Navigation Bar */
 
 /* Navigation Bar */
 nav .row .col img{
@@ -239,7 +236,7 @@ nav .row .col img:hover{
     padding-left: 10px;
 }
 
-    /* Items Container Main Content */
+        /* Items Container Main Content */
 
 /* Upgrade Button Bar */
 #upgrade div:first-child{
@@ -334,7 +331,165 @@ main .row .col .cont-overlay:hover .play-overlay{
     cursor: pointer;
 }
 
+        /* Items Container Player (Footer) */
+
+footer .row .col{
+    display: flex;
+    align-items: center;
+}
+
+footer .row .col:nth-child(2){
+    flex-direction: column;
+}
+
+footer .row .left-player{
+    min-width: 130px;
+}
+
+footer .row .middle-player{
+    width: 330px;
+}
+
+footer .row .right-player{
+    width: 200px;
+}
+
+/* LEFT Container Player */
+footer .row .left-player .player-song{
+    width: 30px;
+}
+
+footer .row .left-player .player-text{
+    width: 45px;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+footer .row .left-player .player-icon{
+    width: 15px;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+/* HOVER Left Container Player */
+footer .row .left-player .player-icon i:hover{
+    color: white;
+    cursor: pointer;
+}
+
+/* MIDDLE Container Player */
+footer .row .middle-player div:first-child{
+    width: 145px;
+    padding-bottom: 5px;
+}
+
+footer .row .middle-player i{
+    color: white;
+    font-size: 15px;
+    padding: 0px 5px;
+    vertical-align: middle;
+}
+
+footer .row .middle-player #play{
+    font-size: 24px;
+}
+
+footer .row .middle-player hr:first-child{
+    position: absolute;
+    height: 7px; 
+    width: 100%; 
+    background-color: gray; 
+    border-radius: 25px; 
+}
+
+footer .row .middle-player #green-bar{
+    position: absolute;
+    height: 7px; 
+    width: 40%; 
+    background-color: white; 
+    border-radius: 25px; 
+}
+
+footer .row .middle-player #circle{
+    display: none;
+    font-size: 15px;
+    position: absolute;
+    bottom: -11px;
+    left: 36%;
+}
+
+footer .row .middle-player span{
+    color: white;
+    height: 7px;
+    font-size: 10px;
+}
+
+/* HOVER Middle Container Player */
+footer .row .middle-player #play:hover{
+    font-size: 26px;
+    cursor: pointer;
+}
+
+footer .row .middle-player .hidden-bar:hover{
+    cursor: pointer;
+}
+
+footer .row .middle-player .hidden-bar:hover #green-bar {
+    background-color: greenyellow;
+}
+
+footer .row .middle-player .hidden-bar:hover #circle{
+    display: block;
+}
+
+/* RIGHT Container Player */
+footer .row .right-player i{
+    color: white;
+    font-size: 15px;
+    padding: 0 4px;
+    vertical-align: middle;
+}
+
+footer .row .right-player hr:first-child{
+    position: absolute;
+    height: 7px; 
+    width: 100%; 
+    background-color: gray; 
+    border-radius: 25px; 
+}
+
+footer .row .right-player #green-bar{
+    position: absolute;
+    height: 7px; 
+    width: 25%; 
+    background-color: white; 
+    border-radius: 25px; 
+}
+
+footer .row .right-player #circle{
+    display: none;
+    font-size: 15px;
+    position: absolute;
+    bottom: -1px;
+    left: 19%;
+}
+
+/* HOVER Right Container Player */
+footer .row .right-player .hidden-bar:hover{
+    cursor: pointer;
+}
+footer .row .right-player .hidden-bar:hover #green-bar {
+    background-color: greenyellow;
+}
+
+footer .row .right-player .hidden-bar:hover #circle{
+    display: block;
+}
+
 /* Reusable class */
+.d-flex{
+    display: flex;
+}
 
 .margin-l-r-20{
     margin: 0 20px;
@@ -369,6 +524,13 @@ main .row .col .cont-overlay:hover .play-overlay{
     color: white;
 }
 
+.text-gray{
+    color: gray;
+}
+
+.bold{
+    font-weight: bold;
+}
 
 
 
@@ -377,19 +539,23 @@ main .row .col .cont-overlay:hover .play-overlay{
     .cont-main{
         width: calc(100% - 210px);
     }
-
+    
     #upgrade{   
         width: calc(100% - 210px);
     }
-
+    
     /* Flex layout */
     .cont-nav{
         width: 210px;
     }
-
+    
     nav .col{
         width: 200px;
     }
+    
+    footer .row .left-player {
+        min-width: 160px;
+      }
 
     /* Items Navigation Bar */
     .visibile-nav{
@@ -400,12 +566,43 @@ main .row .col .cont-overlay:hover .play-overlay{
     .bott-hidden-nav{
         display: block;
     }
+
+    /* Items Container Player (Footer) */
+    footer .row .left-player .player-text {
+        width: 65px;
+    }
+
+    footer .row .left-player .player-song {
+        width: 40px;
+    }
+
+    footer .row .middle-player div:first-child {
+        width: 175px;
+    }
+
+    footer .row .middle-player #play{
+        font-size: 35px;
+      }
+
+    footer .row .middle-player i {
+        font-size: 20px;
+    }
+
+    /* Hover Container Player (Footer) */
+    footer .row .middle-player #play:hover{
+        font-size: 37px;
+    }
 }
 
 @media  screen and (min-width: 768px) {
     /* Flex layout */
     main .col{
         width: calc(100% / 4 - 20px);
+    }
+
+    /* Items Container Player (Footer) */
+    footer .row .left-player .player-icon {
+        width: 35px;
     }
 }
 
@@ -415,5 +612,3 @@ main .row .col .cont-overlay:hover .play-overlay{
         width: calc(100% / 6 - 20px);
     }
 }
-
-

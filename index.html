@@ -276,9 +276,63 @@
             <footer>
                 <div class="container">
                     <div class="row">
-                        <div class="col"></div>
-                        <div class="col"></div>
-                        <div class="col"></div>
+
+                        <!-- Left Container Player -->
+                        <div class="col left-player">
+                            <div class="player-song">
+                                <img src="./img/albums/sinister.jpeg" alt="">
+                            </div>
+                            <div class="player-text text-white">
+                                <span class="bold">Sinister</span>
+                                <span class="text-gray">Brano</span>
+                                <span class="text-gray">Nome</span>
+                            </div>
+                            <div class="player-icon">
+                                <i class="fa-regular fa-heart text-gray"></i>
+                                <i class="fa-regular fa-folder text-gray"></i>
+                            </div>
+                        </div>
+
+                        <!-- Middle Container Player -->
+                        <div class="col middle-player">
+
+                            <!-- music icons -->
+                            <div>
+                                <i class="fa-solid fa-shuffle"></i>
+                                <i class="fa-solid fa-backward-step"></i>
+                                <i class="fa-regular fa-circle-play" id="play"></i>
+                                <i class="fa-solid fa-forward-step"></i>
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </div>
+
+                            <!-- music bar -->
+                            <div style="width: 100%; display: flex; align-items: center;">
+                                <span>0:25</span>
+                                <div class="hidden-bar relative" style="width: 100%; margin: 0 10px;">
+                                    <hr>
+                                    <hr id="green-bar">
+                                    <i class="fas fa-circle" id="circle"></i>
+                                    
+                                </div>
+                                <span>4:35</span>
+                            </div>
+                        </div>
+
+                        <!-- Right Container Player -->
+                        <div class="col right-player">
+                            <div class="d-flex" style="width: 100%;">
+                                <i class="fa-solid fa-list"></i>
+                                <i class="fa-solid fa-display"></i>
+                                <i class="fa-solid fa-volume-high"></i>
+                                <div class="relative" style="width: 100%;padding-top: 4px; margin-left: 5px;">
+                                    <div class="hidden-bar">
+                                        <hr>
+                                        <hr id="green-bar">
+                                        <i class="fas fa-circle" id="circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </footer>

@@ -159,9 +159,13 @@ nav .row .col img:hover{
     display: none;
 }
 
-#logo{
+.hidden-nav #logo{
     width: 80%;
     padding-bottom: 30px;
+}
+
+.hidden-nav #home{
+    border-left: 2px solid greenyellow;
 }
 
 .hidden-nav .ul-scroll{
@@ -263,10 +267,24 @@ main .row ul{
 }
 
 main .row ul li{
-    display: inline;
+    display: inline-block;
     padding: 0 5px;
     font-size: 10px;
     color: gray;
+}
+
+main .row ul li:first-child::after {
+    display: block;
+    clear:both;
+    content : "";
+    position: relative;
+    left    : 0;
+    bottom  : 0;
+    max-width:25px;
+    height  : 2px;
+    width   : 40%;
+    border-bottom:2px solid greenyellow;
+    margin:0 auto;
 }
 
 /* Hover List */
@@ -377,6 +395,11 @@ footer .row .left-player .player-icon i:hover{
     cursor: pointer;
 }
 
+footer .row .left-player .player-text span:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /* MIDDLE Container Player */
 footer .row .middle-player div:first-child{
     width: 145px;
@@ -396,7 +419,7 @@ footer .row .middle-player #play{
 
 footer .row .middle-player hr:first-child{
     position: absolute;
-    height: 7px; 
+    height: 5px; 
     width: 100%; 
     background-color: gray; 
     border-radius: 25px; 
@@ -404,7 +427,7 @@ footer .row .middle-player hr:first-child{
 
 footer .row .middle-player #green-bar{
     position: absolute;
-    height: 7px; 
+    height: 5px; 
     width: 40%; 
     background-color: white; 
     border-radius: 25px; 
@@ -452,7 +475,7 @@ footer .row .right-player i{
 
 footer .row .right-player hr:first-child{
     position: absolute;
-    height: 7px; 
+    height: 5px; 
     width: 100%; 
     background-color: gray; 
     border-radius: 25px; 
@@ -460,7 +483,7 @@ footer .row .right-player hr:first-child{
 
 footer .row .right-player #green-bar{
     position: absolute;
-    height: 7px; 
+    height: 5px; 
     width: 25%; 
     background-color: white; 
     border-radius: 25px; 
